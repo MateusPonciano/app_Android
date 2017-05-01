@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title> USERS </title>
+</head>
+<body>
+  <a href="{% url 'accounts:logout' %}">Logout</a>
+  <h1>Cadastro</h1>
+  <form action='' method='POST'>
+    {% csrf_token %}
+    {{ formulario.as_p}}
+    <input type='submit' value='cadastrar'>
+  </form>
+</body>
+</html>
